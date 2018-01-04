@@ -1,0 +1,16 @@
+var a = 2;
+
+foo();                   // works because `foo()`
+                        
+
+function foo() {         // declaration is "hoisted"
+    a = 3;
+
+    console.log( a );    // 3
+
+    var a;               // declaration is "hoisted"
+                         // to the top of `foo()`
+}
+
+console.log( a );    	  // 2
+
